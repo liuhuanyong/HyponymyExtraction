@@ -10,7 +10,7 @@ HyponymyExtraction and Graph based on KB Schema, Baike-kb and online text extrac
 本项目主要解决第一个问题，本项目的应用场景是：用户输入一个需要了解的词语，后台通过查询既定知识库，从百百科知识库，在线非结构化文本中进行抽取，形成关于该词语的上下位词语网络，并以图谱这一清晰明了的方式展示出来．
 
 # 本项目将采用三种方式来完成这一目标
-1)基于既定知识库的直接查询，对应extract_kb  　
+1)基于既定知识库的直接查询，对应extract_kb  
 2)基于在线百科知识库的抽取，对应extract_baike  
 3)基于在线文本的结构化抽取，对应extract_text  
 
