@@ -373,7 +373,7 @@ def show_graph():
 
 if __name__ == '__main__':
     handler = SemanticBaike()
-    handler.extract_main('中国')
+    handler.extract_main('苹果')
 
     # handler.walk_concept_chain('西瓜')
 

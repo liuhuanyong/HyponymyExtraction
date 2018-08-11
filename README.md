@@ -26,7 +26,7 @@ HyponymyExtraction and Graph based on KB Schema, Baike-kb and online text extrac
 
 # 2)基于在线百科的概念抽取
 苹果上下位
-![image](https://github.com/liuhuanyong/HyponymyExtraction/blob/master/image/kb_apple.png)
+![image](https://github.com/liuhuanyong/HyponymyExtraction/blob/master/image/kb-apple.png)
 小米上下位
 ![image](https://github.com/liuhuanyong/HyponymyExtraction/blob/master/image/kb-xiaomi.png)
 姚明上下位
