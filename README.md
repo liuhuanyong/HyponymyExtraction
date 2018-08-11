@@ -17,13 +17,12 @@ HyponymyExtraction and Graph based on KB Schema, Baike-kb and online text extrac
 # 项目分解
 
 # 1)基于既定知识库的直接查询
-百度百科和互动百科概念schema
-![image](https://github.com/liuhuanyong/HyponymyExtraction/blob/master/image/concept-baike.png)
-概念schema中关于＂语言＂与＂狗＂上下位
-![image](https://github.com/liuhuanyong/HyponymyExtraction/blob/master/image/concept-language.png)
-概念schema中关于＂人物＂上下位
-![image](https://github.com/liuhuanyong/HyponymyExtraction/blob/master/image/concept-renwu.png)
-
+苹果上下位
+![image](https://github.com/liuhuanyong/HyponymyExtraction/blob/master/image/concept-apple.png)
+长江上下位
+![image](https://github.com/liuhuanyong/HyponymyExtraction/blob/master/image/concept-river.png)
+孔子上下位
+![image](https://github.com/liuhuanyong/HyponymyExtraction/blob/master/image/concept-kongzi.png)
 
 # 2)基于在线百科的概念抽取
 苹果上下位

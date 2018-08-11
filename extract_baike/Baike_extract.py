@@ -38,7 +38,7 @@ class CreatePage:
       var options = {
           nodes: {
               shape: 'dot',
-              size: 25,
+              size: 30,
               font: {
                   size: 14
               }
@@ -46,11 +46,11 @@ class CreatePage:
           edges: {
               font: {
                   size: 14,
-                  align: 'left'
+                  align: 'middle'
               },
               color: 'red',
               arrows: {
-                  to: {enabled: true, scaleFactor: 0.5}
+                  to: {enabled: true, scaleFactor: 1.0}
               },
               smooth: {enabled: true}
           },
@@ -302,46 +302,7 @@ class SougouBaike:
 class SemanticBaike:
     def __init__(self):
         cur = '/'.join(os.path.realpath(__file__).split('/')[:-1])
-        concept_file = os.path.join(cur, 'baike_concept.txt')
         self.tmp_file = os.path.join(cur, 'word_concept.txt')
-        self.concept_dict = self.collect_baikeconcept(concept_file)
-
-    '''加载百科上下位概念'''
-    def collect_baikeconcept(self, concept_file):
-        concept_dict = {}
-        for line in open(concept_file):
-            line = line.strip().split('->')
-            if not line:
-                continue
-            instance = line[0]
-            category = line[1]
-            if instance not in concept_dict:
-                concept_dict[instance] = [category]
-            else:
-                concept_dict[instance].append(category)
-        return concept_dict
-
-    '''基于百科上下位词典进行遍历查询'''
-    def walk_concept_chain(self, word):
-        chains = []
-        hyper_words = self.concept_dict.get(word, '')
-        print(hyper_words)
-        if not hyper_words:
-            return
-
-        for hyper in hyper_words:
-            print(word, hyper)
-            hyper_words = self.concept_dict.get(hyper, '')
-            for hyper_ in hyper_words:
-                print(hyper, hyper_)
-                hyper_words = self.concept_dict.get(hyper_, '')
-                for hyper_ in hyper_words:
-                    print(hyper, hyper_)
-                    hyper_words = self.concept_dict.get(hyper_, '')
-                    for hyper_ in hyper_words:
-                        print(hyper, hyper_)
-        return
-
 
     '''根据instance本身抽取其概念'''
     def extract_concept(self, word):
@@ -394,7 +355,6 @@ class SemanticBaike:
         tmps = [[i, j] for i in concepts_all for j in concepts_all if j in i and i and j]
         tuples += tmps
 
-
         for tuple in tuples:
             if tuple[0] != tuple[1]:
                 f.write('->'.join(tuple) + '\n')
@@ -413,7 +373,7 @@ def show_graph():
 
 if __name__ == '__main__':
     handler = SemanticBaike()
-    handler.extract_main('长江')
+    handler.extract_main('中国')
 
     # handler.walk_concept_chain('西瓜')
 
