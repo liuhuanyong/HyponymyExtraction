@@ -1,0 +1,51 @@
+
+    <html>
+    <head>
+      <script type="text/javascript" src="VIS/dist/vis.js"></script>
+      <link href="VIS/dist/vis.css" rel="stylesheet" type="text/css">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+
+    <div id="VIS_draw"></div>
+    <script type="text/javascript">
+      var nodes = [{'group': 'Event', 'id': 73, 'label': '话题人物'}, {'group': 'Event', 'id': 65, 'label': '人物'}, {'group': 'Event', 'id': 31, 'label': '政治人物'}, {'group': 'Event', 'id': 41, 'label': '娱乐人物'}, {'group': 'Event', 'id': 47, 'label': '音乐人物'}, {'group': 'Event', 'id': 55, 'label': '行业人物'}, {'group': 'Event', 'id': 79, 'label': '体育人物'}, {'group': 'Event', 'id': 77, 'label': '篮球运动员'}, {'group': 'Event', 'id': 71, 'label': '运动员'}, {'group': 'Event', 'id': 75, 'label': '篮球'}, {'group': 'Event', 'id': 66, 'label': '姚明'}, {'group': 'Event', 'id': 24, 'label': '陕西省城固县盐务局副局长'}, {'group': 'Event', 'id': 19, 'label': '副局长'}, {'group': 'Event', 'id': 34, 'label': '营口市人大常委会副主任'}, {'group': 'Event', 'id': 29, 'label': '人大常委会'}, {'group': 'Event', 'id': 46, 'label': '中国著名作曲家'}, {'group': 'Event', 'id': 39, 'label': '作曲家'}, {'group': 'Event', 'id': 45, 'label': '大陆音乐人'}, {'group': 'Event', 'id': 54, 'label': '姚明集团董事长'}, {'group': 'Event', 'id': 69, 'label': '董事长'}, {'group': 'Event', 'id': 64, 'label': '中国篮球协会主席、前NBA球星'}, {'group': 'Event', 'id': 59, 'label': '球星'}, {'group': 'Event', 'id': 78, 'label': '中国篮球协会主席、中职联公司董事长'}];
+      var edges = [{'from': 73, 'label': 'is-a', 'to': 65}, {'from': 31, 'label': 'is-a', 'to': 65}, {'from': 41, 'label': 'is-a', 'to': 65}, {'from': 47, 'label': 'is-a', 'to': 65}, {'from': 55, 'label': 'is-a', 'to': 65}, {'from': 79, 'label': 'is-a', 'to': 65}, {'from': 77, 'label': 'is-a', 'to': 71}, {'from': 77, 'label': 'is-a', 'to': 75}, {'from': 66, 'label': 'is-a', 'to': 24}, {'from': 24, 'label': 'is-a', 'to': 19}, {'from': 24, 'label': 'is-a', 'to': 73}, {'from': 24, 'label': 'is-a', 'to': 65}, {'from': 24, 'label': 'is-a', 'to': 66}, {'from': 66, 'label': 'is-a', 'to': 34}, {'from': 34, 'label': 'is-a', 'to': 29}, {'from': 34, 'label': 'is-a', 'to': 31}, {'from': 34, 'label': 'is-a', 'to': 65}, {'from': 34, 'label': 'is-a', 'to': 66}, {'from': 66, 'label': 'is-a', 'to': 46}, {'from': 46, 'label': 'is-a', 'to': 39}, {'from': 46, 'label': 'is-a', 'to': 41}, {'from': 46, 'label': 'is-a', 'to': 65}, {'from': 46, 'label': 'is-a', 'to': 45}, {'from': 46, 'label': 'is-a', 'to': 47}, {'from': 66, 'label': 'is-a', 'to': 54}, {'from': 54, 'label': 'is-a', 'to': 69}, {'from': 54, 'label': 'is-a', 'to': 65}, {'from': 54, 'label': 'is-a', 'to': 55}, {'from': 66, 'label': 'is-a', 'to': 64}, {'from': 64, 'label': 'is-a', 'to': 59}, {'from': 64, 'label': 'is-a', 'to': 71}, {'from': 64, 'label': 'is-a', 'to': 77}, {'from': 64, 'label': 'is-a', 'to': 65}, {'from': 66, 'label': 'is-a', 'to': 78}, {'from': 78, 'label': 'is-a', 'to': 69}, {'from': 78, 'label': 'is-a', 'to': 71}, {'from': 78, 'label': 'is-a', 'to': 73}, {'from': 78, 'label': 'is-a', 'to': 75}, {'from': 78, 'label': 'is-a', 'to': 77}, {'from': 78, 'label': 'is-a', 'to': 79}];
+
+      var container = document.getElementById("VIS_draw");
+
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+
+      var options = {
+          nodes: {
+              shape: 'dot',
+              size: 25,
+              font: {
+                  size: 14
+              }
+          },
+          edges: {
+              font: {
+                  size: 14,
+                  align: 'left'
+              },
+              color: 'red',
+              arrows: {
+                  to: {enabled: true, scaleFactor: 0.5}
+              },
+              smooth: {enabled: true}
+          },
+          physics: {
+              enabled: true
+          }
+      };
+
+      var network = new vis.Network(container, data, options);
+
+    </script>
+    </body>
+    </html>
+    

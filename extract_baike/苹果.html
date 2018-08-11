@@ -1,0 +1,51 @@
+
+    <html>
+    <head>
+      <script type="text/javascript" src="VIS/dist/vis.js"></script>
+      <link href="VIS/dist/vis.css" rel="stylesheet" type="text/css">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+
+    <div id="VIS_draw"></div>
+    <script type="text/javascript">
+      var nodes = [{'group': 'Event', 'id': 155, 'label': '爱情电影'}, {'group': 'Event', 'id': 31, 'label': '电影'}, {'group': 'Event', 'id': 153, 'label': '剧情电影'}, {'group': 'Event', 'id': 157, 'label': '韩国电影'}, {'group': 'Event', 'id': 171, 'label': '虚拟人物'}, {'group': 'Event', 'id': 170, 'label': '人物'}, {'group': 'Event', 'id': 103, 'label': '电影作品'}, {'group': 'Event', 'id': 138, 'label': '苹果公司'}, {'group': 'Event', 'id': 113, 'label': '公司'}, {'group': 'Event', 'id': 101, 'label': '娱乐作品'}, {'group': 'Event', 'id': 177, 'label': '娱乐'}, {'group': 'Event', 'id': 178, 'label': '苹果'}, {'group': 'Event', 'id': 36, 'label': '蔷薇科苹果属果实'}, {'group': 'Event', 'id': 40, 'label': '韩国2008年康理贯执导电影'}, {'group': 'Event', 'id': 43, 'label': '苹果产品公司'}, {'group': 'Event', 'id': 84, 'label': '伊朗1998年莎米拉·玛克玛尔巴夫执导电影'}, {'group': 'Event', 'id': 102, 'label': '2007年李玉执导电影'}, {'group': 'Event', 'id': 106, 'label': '网游《天堂梦》中人物'}, {'group': 'Event', 'id': 148, 'label': '1998年莎米拉·玛克玛尔巴夫导演伊朗电影'}, {'group': 'Event', 'id': 158, 'label': '2008年康理贯导演韩国电影'}, {'group': 'Event', 'id': 165, 'label': '音乐作品'}, {'group': 'Event', 'id': 187, 'label': '音乐'}, {'group': 'Event', 'id': 119, 'label': '水果'}, {'group': 'Event', 'id': 52, 'label': '动漫《男子高中生的日常》中角色'}, {'group': 'Event', 'id': 47, 'label': '角色'}, {'group': 'Event', 'id': 51, 'label': '动漫形象'}, {'group': 'Event', 'id': 58, 'label': '谢和弦、E-SO演唱歌曲'}, {'group': 'Event', 'id': 175, 'label': '歌曲'}, {'group': 'Event', 'id': 68, 'label': '蔷薇科苹果属果树'}, {'group': 'Event', 'id': 121, 'label': '果树'}, {'group': 'Event', 'id': 184, 'label': '木本植物'}, {'group': 'Event', 'id': 185, 'label': '植物'}, {'group': 'Event', 'id': 69, 'label': '生物物种'}, {'group': 'Event', 'id': 80, 'label': '安与骑兵演唱歌曲'}, {'group': 'Event', 'id': 186, 'label': '民族音乐'}, {'group': 'Event', 'id': 167, 'label': '单曲'}, {'group': 'Event', 'id': 88, 'label': 'Minecraft中的食物类物品'}, {'group': 'Event', 'id': 89, 'label': '物品'}, {'group': 'Event', 'id': 94, 'label': '邓丽欣演唱歌曲'}, {'group': 'Event', 'id': 110, 'label': '中药'}, {'group': 'Event', 'id': 111, 'label': '中医药'}, {'group': 'Event', 'id': 118, 'label': '果实'}, {'group': 'Event', 'id': 117, 'label': ''}, {'group': 'Event', 'id': 124, 'label': '动漫人物'}, {'group': 'Event', 'id': 127, 'label': '电脑'}, {'group': 'Event', 'id': 131, 'label': '科技'}, {'group': 'Event', 'id': 133, 'label': 'IT'}, {'group': 'Event', 'id': 135, 'label': '企业'}, {'group': 'Event', 'id': 188, 'label': '国外品牌'}, {'group': 'Event', 'id': 189, 'label': '品牌'}, {'group': 'Event', 'id': 159, 'label': '影视作品'}, {'group': 'Event', 'id': 166, 'label': '安与骑兵歌曲'}, {'group': 'Event', 'id': 176, 'label': '邓丽欣歌曲'}, {'group': 'Event', 'id': 182, 'label': '苹果上线官方微信公众号'}, {'group': 'Event', 'id': 181, 'label': '公众'}, {'group': 'Event', 'id': 183, 'label': '工具'}];
+      var edges = [{'from': 155, 'label': 'is-a', 'to': 31}, {'from': 153, 'label': 'is-a', 'to': 31}, {'from': 157, 'label': 'is-a', 'to': 31}, {'from': 171, 'label': 'is-a', 'to': 170}, {'from': 103, 'label': 'is-a', 'to': 31}, {'from': 138, 'label': 'is-a', 'to': 113}, {'from': 101, 'label': 'is-a', 'to': 177}, {'from': 138, 'label': 'is-a', 'to': 178}, {'from': 36, 'label': 'is-a', 'to': 178}, {'from': 40, 'label': 'is-a', 'to': 31}, {'from': 43, 'label': 'is-a', 'to': 113}, {'from': 84, 'label': 'is-a', 'to': 31}, {'from': 102, 'label': 'is-a', 'to': 31}, {'from': 106, 'label': 'is-a', 'to': 170}, {'from': 148, 'label': 'is-a', 'to': 31}, {'from': 158, 'label': 'is-a', 'to': 31}, {'from': 165, 'label': 'is-a', 'to': 187}, {'from': 178, 'label': 'is-a', 'to': 36}, {'from': 36, 'label': 'is-a', 'to': 119}, {'from': 178, 'label': 'is-a', 'to': 40}, {'from': 40, 'label': 'is-a', 'to': 101}, {'from': 178, 'label': 'is-a', 'to': 43}, {'from': 178, 'label': 'is-a', 'to': 52}, {'from': 52, 'label': 'is-a', 'to': 47}, {'from': 52, 'label': 'is-a', 'to': 178}, {'from': 52, 'label': 'is-a', 'to': 51}, {'from': 52, 'label': 'is-a', 'to': 170}, {'from': 178, 'label': 'is-a', 'to': 58}, {'from': 58, 'label': 'is-a', 'to': 175}, {'from': 58, 'label': 'is-a', 'to': 170}, {'from': 178, 'label': 'is-a', 'to': 68}, {'from': 68, 'label': 'is-a', 'to': 121}, {'from': 68, 'label': 'is-a', 'to': 184}, {'from': 68, 'label': 'is-a', 'to': 185}, {'from': 68, 'label': 'is-a', 'to': 69}, {'from': 178, 'label': 'is-a', 'to': 80}, {'from': 80, 'label': 'is-a', 'to': 175}, {'from': 80, 'label': 'is-a', 'to': 165}, {'from': 80, 'label': 'is-a', 'to': 186}, {'from': 80, 'label': 'is-a', 'to': 101}, {'from': 80, 'label': 'is-a', 'to': 167}, {'from': 178, 'label': 'is-a', 'to': 84}, {'from': 84, 'label': 'is-a', 'to': 101}, {'from': 178, 'label': 'is-a', 'to': 88}, {'from': 88, 'label': 'is-a', 'to': 89}, {'from': 178, 'label': 'is-a', 'to': 94}, {'from': 94, 'label': 'is-a', 'to': 175}, {'from': 94, 'label': 'is-a', 'to': 187}, {'from': 178, 'label': 'is-a', 'to': 102}, {'from': 102, 'label': 'is-a', 'to': 155}, {'from': 102, 'label': 'is-a', 'to': 101}, {'from': 102, 'label': 'is-a', 'to': 103}, {'from': 178, 'label': 'is-a', 'to': 106}, {'from': 106, 'label': 'is-a', 'to': 171}, {'from': 178, 'label': 'is-a', 'to': 110}, {'from': 110, 'label': 'is-a', 'to': 111}, {'from': 178, 'label': 'is-a', 'to': 113}, {'from': 178, 'label': 'is-a', 'to': 118}, {'from': 118, 'label': 'is-a', 'to': 117}, {'from': 118, 'label': 'is-a', 'to': 119}, {'from': 178, 'label': 'is-a', 'to': 121}, {'from': 178, 'label': 'is-a', 'to': 124}, {'from': 124, 'label': 'is-a', 'to': 170}, {'from': 178, 'label': 'is-a', 'to': 127}, {'from': 178, 'label': 'is-a', 'to': 138}, {'from': 138, 'label': 'is-a', 'to': 131}, {'from': 138, 'label': 'is-a', 'to': 133}, {'from': 138, 'label': 'is-a', 'to': 135}, {'from': 138, 'label': 'is-a', 'to': 188}, {'from': 138, 'label': 'is-a', 'to': 189}, {'from': 178, 'label': 'is-a', 'to': 148}, {'from': 148, 'label': 'is-a', 'to': 153}, {'from': 148, 'label': 'is-a', 'to': 155}, {'from': 148, 'label': 'is-a', 'to': 157}, {'from': 148, 'label': 'is-a', 'to': 159}, {'from': 178, 'label': 'is-a', 'to': 158}, {'from': 158, 'label': 'is-a', 'to': 153}, {'from': 158, 'label': 'is-a', 'to': 155}, {'from': 158, 'label': 'is-a', 'to': 157}, {'from': 158, 'label': 'is-a', 'to': 159}, {'from': 178, 'label': 'is-a', 'to': 166}, {'from': 166, 'label': 'is-a', 'to': 175}, {'from': 166, 'label': 'is-a', 'to': 165}, {'from': 166, 'label': 'is-a', 'to': 167}, {'from': 178, 'label': 'is-a', 'to': 170}, {'from': 170, 'label': 'is-a', 'to': 171}, {'from': 178, 'label': 'is-a', 'to': 176}, {'from': 176, 'label': 'is-a', 'to': 175}, {'from': 176, 'label': 'is-a', 'to': 177}, {'from': 178, 'label': 'is-a', 'to': 182}, {'from': 182, 'label': 'is-a', 'to': 181}, {'from': 182, 'label': 'is-a', 'to': 183}, {'from': 184, 'label': 'is-a', 'to': 185}, {'from': 186, 'label': 'is-a', 'to': 187}, {'from': 188, 'label': 'is-a', 'to': 189}];
+
+      var container = document.getElementById("VIS_draw");
+
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+
+      var options = {
+          nodes: {
+              shape: 'dot',
+              size: 25,
+              font: {
+                  size: 14
+              }
+          },
+          edges: {
+              font: {
+                  size: 14,
+                  align: 'left'
+              },
+              color: 'red',
+              arrows: {
+                  to: {enabled: true, scaleFactor: 0.5}
+              },
+              smooth: {enabled: true}
+          },
+          physics: {
+              enabled: true
+          }
+      };
+
+      var network = new vis.Network(container, data, options);
+
+    </script>
+    </body>
+    </html>
+    

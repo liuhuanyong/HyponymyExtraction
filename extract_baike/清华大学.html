@@ -1,0 +1,51 @@
+
+    <html>
+    <head>
+      <script type="text/javascript" src="VIS/dist/vis.js"></script>
+      <link href="VIS/dist/vis.css" rel="stylesheet" type="text/css">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+
+    <div id="VIS_draw"></div>
+    <script type="text/javascript">
+      var nodes = [{'group': 'Event', 'id': 25, 'label': '清华大学'}, {'group': 'Event', 'id': 35, 'label': '大学'}, {'group': 'Event', 'id': 21, 'label': '中国著名大学'}, {'group': 'Event', 'id': 31, 'label': '高等教育'}, {'group': 'Event', 'id': 33, 'label': '教育'}, {'group': 'Event', 'id': 20, 'label': '北京清华大学的简称'}, {'group': 'Event', 'id': 11, 'label': '名校'}, {'group': 'Event', 'id': 13, 'label': '211工程'}, {'group': 'Event', 'id': 19, 'label': '985工程'}, {'group': 'Event', 'id': 34, 'label': '台湾的清华大学'}, {'group': 'Event', 'id': 27, 'label': '台湾'}, {'group': 'Event', 'id': 29, 'label': '机构'}];
+      var edges = [{'from': 25, 'label': 'is-a', 'to': 35}, {'from': 21, 'label': 'is-a', 'to': 35}, {'from': 31, 'label': 'is-a', 'to': 33}, {'from': 25, 'label': 'is-a', 'to': 20}, {'from': 20, 'label': 'is-a', 'to': 25}, {'from': 20, 'label': 'is-a', 'to': 11}, {'from': 20, 'label': 'is-a', 'to': 13}, {'from': 20, 'label': 'is-a', 'to': 33}, {'from': 20, 'label': 'is-a', 'to': 35}, {'from': 20, 'label': 'is-a', 'to': 19}, {'from': 20, 'label': 'is-a', 'to': 21}, {'from': 25, 'label': 'is-a', 'to': 34}, {'from': 34, 'label': 'is-a', 'to': 25}, {'from': 34, 'label': 'is-a', 'to': 27}, {'from': 34, 'label': 'is-a', 'to': 29}, {'from': 34, 'label': 'is-a', 'to': 31}, {'from': 34, 'label': 'is-a', 'to': 33}, {'from': 34, 'label': 'is-a', 'to': 35}];
+
+      var container = document.getElementById("VIS_draw");
+
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+
+      var options = {
+          nodes: {
+              shape: 'dot',
+              size: 25,
+              font: {
+                  size: 14
+              }
+          },
+          edges: {
+              font: {
+                  size: 14,
+                  align: 'left'
+              },
+              color: 'red',
+              arrows: {
+                  to: {enabled: true, scaleFactor: 0.5}
+              },
+              smooth: {enabled: true}
+          },
+          physics: {
+              enabled: true
+          }
+      };
+
+      var network = new vis.Network(container, data, options);
+
+    </script>
+    </body>
+    </html>
+    

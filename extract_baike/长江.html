@@ -1,0 +1,51 @@
+
+    <html>
+    <head>
+      <script type="text/javascript" src="VIS/dist/vis.js"></script>
+      <link href="VIS/dist/vis.css" rel="stylesheet" type="text/css">
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    </head>
+    <body>
+
+    <div id="VIS_draw"></div>
+    <script type="text/javascript">
+      var nodes = [{'group': 'Event', 'id': 53, 'label': '长江'}, {'group': 'Event', 'id': 18, 'label': '世界第三长河，亚洲第一长河'}, {'group': 'Event', 'id': 55, 'label': '长河'}, {'group': 'Event', 'id': 54, 'label': '世界第三长河'}, {'group': 'Event', 'id': 7, 'label': '中国'}, {'group': 'Event', 'id': 9, 'label': '河流'}, {'group': 'Event', 'id': 11, 'label': '三峡工程'}, {'group': 'Event', 'id': 13, 'label': '扬子江'}, {'group': 'Event', 'id': 15, 'label': '江河'}, {'group': 'Event', 'id': 19, 'label': '地理'}, {'group': 'Event', 'id': 26, 'label': '同名记者'}, {'group': 'Event', 'id': 23, 'label': '记者'}, {'group': 'Event', 'id': 56, 'label': '行业人物'}, {'group': 'Event', 'id': 57, 'label': '人物'}, {'group': 'Event', 'id': 32, 'label': '左河水的诗作'}, {'group': 'Event', 'id': 31, 'label': '诗作'}, {'group': 'Event', 'id': 47, 'label': '文化'}, {'group': 'Event', 'id': 38, 'label': '交响合唱作品'}, {'group': 'Event', 'id': 59, 'label': '作品'}, {'group': 'Event', 'id': 39, 'label': '娱乐'}, {'group': 'Event', 'id': 46, 'label': '郭峰《英雄和花朵》中文章'}, {'group': 'Event', 'id': 43, 'label': '文章'}, {'group': 'Event', 'id': 58, 'label': '文学作品'}, {'group': 'Event', 'id': 52, 'label': '长江街机游戏'}, {'group': 'Event', 'id': 51, 'label': '游戏'}];
+      var edges = [{'from': 53, 'label': 'is-a', 'to': 18}, {'from': 18, 'label': 'is-a', 'to': 55}, {'from': 18, 'label': 'is-a', 'to': 54}, {'from': 18, 'label': 'is-a', 'to': 7}, {'from': 18, 'label': 'is-a', 'to': 9}, {'from': 18, 'label': 'is-a', 'to': 11}, {'from': 18, 'label': 'is-a', 'to': 13}, {'from': 18, 'label': 'is-a', 'to': 15}, {'from': 18, 'label': 'is-a', 'to': 53}, {'from': 18, 'label': 'is-a', 'to': 19}, {'from': 53, 'label': 'is-a', 'to': 26}, {'from': 26, 'label': 'is-a', 'to': 23}, {'from': 26, 'label': 'is-a', 'to': 56}, {'from': 26, 'label': 'is-a', 'to': 57}, {'from': 53, 'label': 'is-a', 'to': 32}, {'from': 32, 'label': 'is-a', 'to': 31}, {'from': 32, 'label': 'is-a', 'to': 47}, {'from': 53, 'label': 'is-a', 'to': 38}, {'from': 38, 'label': 'is-a', 'to': 59}, {'from': 38, 'label': 'is-a', 'to': 39}, {'from': 53, 'label': 'is-a', 'to': 46}, {'from': 46, 'label': 'is-a', 'to': 43}, {'from': 46, 'label': 'is-a', 'to': 58}, {'from': 46, 'label': 'is-a', 'to': 47}, {'from': 53, 'label': 'is-a', 'to': 52}, {'from': 52, 'label': 'is-a', 'to': 51}, {'from': 52, 'label': 'is-a', 'to': 53}, {'from': 54, 'label': 'is-a', 'to': 55}, {'from': 56, 'label': 'is-a', 'to': 57}, {'from': 58, 'label': 'is-a', 'to': 59}];
+
+      var container = document.getElementById("VIS_draw");
+
+      var data = {
+        nodes: nodes,
+        edges: edges
+      };
+
+      var options = {
+          nodes: {
+              shape: 'dot',
+              size: 25,
+              font: {
+                  size: 14
+              }
+          },
+          edges: {
+              font: {
+                  size: 14,
+                  align: 'left'
+              },
+              color: 'red',
+              arrows: {
+                  to: {enabled: true, scaleFactor: 0.5}
+              },
+              smooth: {enabled: true}
+          },
+          physics: {
+              enabled: true
+          }
+      };
+
+      var network = new vis.Network(container, data, options);
+
+    </script>
+    </body>
+    </html>
+    
