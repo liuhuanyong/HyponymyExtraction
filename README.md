@@ -37,4 +37,4 @@ HyponymyExtraction and Graph based on KB Schema, Baike-kb and online text extrac
 姚明上下位
 ![image](https://github.com/liuhuanyong/HyponymyExtraction/blob/master/image/kb-yaoming.png)
 
-
+If any question about the project or me ,see https://liuhuanyong.github.io/
